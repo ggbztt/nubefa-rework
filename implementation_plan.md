@@ -26,9 +26,19 @@ El objetivo general es establecer la arquitectura inicial del proyecto e impleme
   - `Pricing` (Plan Gratis, Local, Duo Local, Tri Local, con destaque dinámico del plan recomendado).
   - `Footer` (Con teléfonos y correos de Nubefa).
 
-### Fase 3: Integración de Contenidos Exactos
+### Fase 3: Integración de Contenidos Exactos (Completado)
 - Uso del contenido recién extraído de `nubefa.com` para rellenar los componentes maquetados.
 
+### Fase 4: Bases de Interfaz Funcional (Login & Dashboard)
+Como solicitó Adolf, dejaremos las bases preparadas para el crecimiento de la aplicación:
+- **Flujo de Autenticación (`/login` y `/register`)**: Maquetación de pantallas premium para acceder al sistema.
+- **Shell del Dashboard (`app/(dashboard)/layout.tsx`)**: Arquitectura de un panel de control con su barra lateral de menú y cabecera de usuario.
+- **Preparativos de Base de Datos**: Tenemos PostgreSQL en el contenedor. Necesitamos dejar la estructura del ORM o las plantillas listas.
+
+## Preguntas Abiertas / Requiere Revisión del Usuario (Fase 4)
+
+> [!IMPORTANT]
+> **Base de Datos y ORM:** Para sentar las bases técnicas reales de usuarios y pagos, recomendaría integrar **Prisma ORM** o **Drizzle ORM** ya que simplifican el manejo de las tablas en Next.js. ¿Te gustaría que te guíe para instalar Prisma (ejecutando comandos manuales) o prefieres que por ahora dejemos **únicamente la parte visual** (Mockup) del Login y Dashboard?
 ## Plan de Verificación
 
 ### Verificación del Entorno

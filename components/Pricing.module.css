@@ -1,0 +1,107 @@
+.pricing {
+  padding: 6rem 0;
+  background-color: var(--color-surface-gray);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-bottom: 4rem;
+  font-size: 1.125rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  position: relative;
+}
+
+/* Efecto hover suave para todos los planes */
+.card:hover:not(.highlighted) {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+.highlighted {
+  border: 2px solid var(--color-primary);
+  transform: scale(1.05); /* Sobresale un poco más */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+
+.recommendedBadge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.planName {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.period {
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+
+.limits {
+  background-color: #f4f5f8;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.featuresList {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.featuresList li {
+  margin-bottom: 0.75rem;
+  color: var(--color-text-main);
+}

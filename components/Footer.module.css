@@ -1,0 +1,41 @@
+.footer {
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-border);
+  padding-top: 4rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.brand h3 {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.brand p {
+  color: var(--color-text-muted);
+}
+
+.linksBlock h4 {
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+}
+
+.linksBlock p {
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.copyright {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}

@@ -1,0 +1,41 @@
+.header {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-text-main);
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
