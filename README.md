@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Nubefa ERP (Rework)
+> La telegestión de MYPEs más completa y robusta. Software contable, inventarios y facturación electrónica ilimitada.
 
-## Getting Started
+Este proyecto es una reestructuración de la plataforma comercial [Nubefa](https://nubefa.com/), aplicando prácticas modernas de interfaz, optimizaciones de accesibilidad, despliegue estandarizado con Docker (orientación on-premise) y basándose en un sistema de diseño propio y premium inspirado en el rubro contable.
 
-First, run the development server:
+## 🛠️ Tecnologías del Proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **💻 Frontend:** [Next.js](https://nextjs.org/) (App Router), Vanilla CSS / CSS Modules nativos (sin dependencias para asegurar agilidad), React, Iconos SVG purificados inline.
+- **📦 Backing & DevOps:** Arquitectura lista con Docker y `docker-compose` usando un pipeline multi-stage build hacia modo `standalone`.
+- **🗄️ Base de Datos:** Entorno aislado de PostgreSQL 15 listo para inyectarse a un futuro ORM.
+
+## 🗂️ Arquitectura del Repositorio
+
+El código actualmente está focalizado en el Frontend (Landing Page) con una separación de responsabilidades estricta.
+
+```text
+/app
+ ├── globals.css         # Sistema de tokens CSS, paleta de colores y clases de Animación.
+ ├── layout.tsx          # Wrapper principal con tipografía 'Inter' y reglas SEO en español.
+ └── page.tsx            # Ensamblador de los componentes UI.
+/components
+ ├── Features.tsx        # Integraciones clave con SVG inline sin dependencias.
+ ├── HeroSection.tsx     # Cabecera de captación y CTA de registro de 30 días.
+ ├── Pricing.tsx         # Listado tabular interactivo de paquetes SaaS.
+ └── Header/Footer       # Módulos de navegación institucional.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Ejecución y Despliegue en Local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Acorde a las normativas estrictas de este repositorio, **todos los comandos deben ser ejecutados manualmente por el usuario administrador** y no existen scripts que alteren el sistema local por detrás.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Servidor de Desarrollo Local Frontend (Pnpm)
+Módulo útil para desarrollar las pantallas visuales usando el framework con Hot Reloading:
+```bash
+# 1. Asegurarse de tener los módulos listos
+pnpm install
 
-## Learn More
+# 2. Correr entorno de desarrollo
+pnpm dev
+```
+La aplicación se visualizará en `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2. Entorno Dockerizado Completo (On-Premise Ready)
+Para emular el comportamiento que tendría la aplicación en el servidor del cliente que incluirá la capa de Base de Datos relacional, compilando una versión súper ligera de Next.js.
+```bash
+# Construir infraestructura de frontend y Base de Datos PostgreSQL
+docker compose up --build
+```
