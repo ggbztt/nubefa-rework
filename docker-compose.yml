@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://nubefa_user:nubefa_password@db:5432/nubefa_db
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - nubefa-net
+    restart: always
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: nubefa_user
+      POSTGRES_PASSWORD: nubefa_password
+      POSTGRES_DB: nubefa_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nubefa_user -d nubefa_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - nubefa-net
+    restart: always
+
+networks:
+  nubefa-net:
+    driver: bridge
+
+volumes:
+  postgres_data:
