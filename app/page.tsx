@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import Features from '@/components/Features';
+import NubefaAssist from '@/components/NubefaAssist';
+import Ecosistema from '@/components/Ecosistema';
 import Pricing from '@/components/Pricing';
 import Footer from '@/components/Footer';
 
@@ -10,7 +11,14 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
-        <Features />
+        
+        {/* Nueva Sección Oscura: Nubefa Assist */}
+        <NubefaAssist />
+        
+        {/* Nuevo Ecosistema Interactivo */}
+        <Ecosistema />
+        
+        {/* Pricing y Footer (Pendientes de pasar a Tailwind puro) */}
         <Pricing />
       </main>
       <Footer />
