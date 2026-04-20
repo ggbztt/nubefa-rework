@@ -17,11 +17,11 @@ export default function HeroSection() {
             Nubefa es el software exacto para PyMEs. Emite facturas electrónicas, controla el inventario y supervisa cobros desde un sencillo panel.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
-            <Link href="/register" className="w-full sm:w-auto bg-qb-green hover:bg-qb-green-dark text-white text-[1.1rem] font-semibold py-3.5 px-8 rounded-full transition-all hover:-translate-y-1 text-center shadow-lg shadow-qb-green/20">
-              Prueba gratuita de 30 días
-            </Link>
-            <Link href="#pricing" className="w-full sm:w-auto bg-transparent border border-qb-border hover:bg-black/5 text-qb-text-main text-[1.1rem] font-semibold py-3.5 px-8 rounded-full transition-all text-center">
+            <Link href="#pricing" className="w-full sm:w-auto bg-qb-green hover:bg-qb-green-dark text-white text-[1.1rem] font-semibold py-3.5 px-8 rounded-full transition-all hover:-translate-y-1 text-center shadow-lg shadow-qb-green/20">
               Ver planes y precios
+            </Link>
+            <Link href="/register" className="w-full sm:w-auto bg-transparent border border-gray-400 hover:border-gray-800 text-qb-text-main text-[1.1rem] font-semibold py-3.5 px-8 rounded-full transition-all text-center">
+              Pruebe gratis por 30 días
             </Link>
           </div>
           <p className="text-sm text-qb-text-muted font-medium ml-2">
@@ -57,7 +57,7 @@ export default function HeroSection() {
           </div>
           
           {/* Card Flotante Decorativa 1 */}
-          <div className="absolute left-2 md:-left-8 top-16 bg-white border border-qb-border shadow-xl rounded-xl p-4 w-52 opacity-90 transition-transform transform hover:scale-105 z-20">
+          <div className="absolute top-[8%] -left-[10%] lg:-left-[15%] bg-white border border-qb-border shadow-xl rounded-xl p-4 w-52 opacity-95 transition-transform transform hover:scale-105 z-20">
              <div className="flex items-center gap-3">
                <div className="w-10 h-10 bg-green-100 text-qb-green flex items-center justify-center rounded-full font-bold">✓</div>
                <div>
@@ -68,7 +68,7 @@ export default function HeroSection() {
           </div>
 
           {/* Card Flotante Decorativa 2 */}
-          <div className="absolute right-2 bottom-12 lg:-bottom-6 lg:right-10 bg-white border border-qb-border shadow-xl rounded-xl p-4 w-56 opacity-90 transition-transform transform hover:scale-105 z-20">
+          <div className="absolute top-[65%] -right-[5%] lg:-right-[10%] bg-white border border-qb-border shadow-xl rounded-xl p-4 w-56 opacity-95 transition-transform transform hover:scale-105 z-20" style={{animation: 'gentleFloat 4s ease-in-out infinite'}}>
              <div className="flex items-center gap-3">
                <div className="w-10 h-10 bg-blue-100 text-qb-blue flex items-center justify-center rounded-full">
                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>

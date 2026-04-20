@@ -2,7 +2,11 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-qb-border shadow-sm">
+    <>
+      <div className="w-full bg-[#1c1d1f] text-white text-sm py-2 flex justify-center items-center font-medium">
+        Comienza hoy y ahorra un 90 % durante 3 meses*. <a href="#pricing" className="ml-2 underline font-bold hover:text-qb-green transition-colors">Oferta por tiempo limitado</a>
+      </div>
+      <header className="sticky top-0 z-50 w-full bg-white border-b border-qb-border shadow-sm">
       <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-10">
           {/* Logo Brand */}
@@ -62,5 +66,6 @@ export default function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }
